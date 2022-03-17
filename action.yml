@@ -2,7 +2,7 @@ name: '1k-words'
 description: 'Pull requests titles must include emojis 🤖'
 author: 'idoco'
 runs:
-  using: 'node12'
+  using: 'node16'
   main: 'dist/index.js'
 branding:
   color: "yellow"
