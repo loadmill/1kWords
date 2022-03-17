@@ -1,6 +1,6 @@
-name: 'Github Action Template'
-description: 'simple typescript template for building GitHub Actions'
-author: 'notiz.dev'
+name: '1k-words'
+description: 'Pull requests titles must include emojis 🤖'
+author: 'idoco'
 inputs:
   my_input:
     description: 'input description here'
