@@ -5,7 +5,7 @@
   "description": "TypeScript template action",
   "main": "lib/index.js",
   "scripts": {
-    "build": "tsc",
+    "build": "tsc --skipLibCheck",
     "format": "prettier --write **/*.ts",
     "format-check": "prettier --check **/*.ts",
     "pack": "ncc build"
@@ -24,7 +24,8 @@
   "author": "notiz.dev",
   "license": "MIT",
   "dependencies": {
-    "@actions/core": "^1.2.0"
+    "@actions/core": "^1.2.0",
+    "@actions/github": "^5.0.0"
   },
   "devDependencies": {
     "@types/node": "^12.7.12",
