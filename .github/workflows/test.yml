@@ -6,12 +6,6 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v1
-    - name: run action
-      id: run_action
-      uses: ./
-      # with: 
-      #   my_input: 'World'
 
-    - name: log action output
-      run: echo ${{steps.run_action.outputs.my_output}}     
+    - name: validate emoji in PR title
+      uses: ./
