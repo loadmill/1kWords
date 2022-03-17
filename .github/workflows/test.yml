@@ -1,6 +1,7 @@
 name: "Demo workflow"
 on:
   pull_request:
+    types: [opened, edited, reopened]
 
 jobs:
   validate-emoji:
