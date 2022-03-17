@@ -1,10 +1,6 @@
 name: '1k-words'
 description: 'Pull requests titles must include emojis 🤖'
 author: 'idoco'
-inputs:
-  my_input:
-    description: 'input description here'
-    default: 'World'
 runs:
   using: 'node12'
   main: 'dist/index.js'
