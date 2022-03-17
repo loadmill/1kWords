@@ -3729,15 +3729,9 @@ var __importStar = (this && this.__importStar) || function (mod) {
     return result;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-// import * as core from '@actions/core';
 const github = __importStar(__webpack_require__(469));
 function run() {
-    // const name: string = core.getInput('my_input');
-    // if (name) {
-    //   core.debug(`Hello ${name}!`);
-    //   return core.setOutput('my_output', `Hello ${name}!`);
-    // }
-    // core.setFailed('my_input not specified!');
+    console.log(`action starting`);
     const payload = JSON.stringify(github.context.payload, undefined, 2);
     console.log(`The event payload: ${payload}`);
 }
