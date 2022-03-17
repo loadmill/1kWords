@@ -4012,7 +4012,14 @@ function run() {
         core.setFailed("emoji validation should only run on pull requests");
         return;
     }
-    console.log(`The PR title is ${(_a = github.context.payload.pull_request) === null || _a === void 0 ? void 0 : _a.title}`);
+    const pullRequestTitle = ((_a = github.context.payload.pull_request) === null || _a === void 0 ? void 0 : _a.title) || "";
+    console.log(`The PR title is ${pullRequestTitle}`);
+    // Regular expression to match strings starting with emoji
+    const regexExp = /^(\u00a9|\u00ae|[\u2000-\u3300]|\ud83c[\ud000-\udfff]|\ud83d[\ud000-\udfff]|\ud83e[\ud000-\udfff]).*/gi;
+    if (!regexExp.test(pullRequestTitle)) {
+        core.setFailed("Pull request title does not start with emoji");
+        return;
+    }
 }
 run();
 
