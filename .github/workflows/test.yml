@@ -1,12 +1,12 @@
-name: "Validate emoji"
+name: "Demo workflow"
 on:
   pull_request:
 
 jobs:
-  test:
+  validate-emoji:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
-    
+
     - name: validate emoji in PR title
       uses: ./
