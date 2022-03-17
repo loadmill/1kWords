@@ -1,5 +1,5 @@
-name: "test"
-on: # rebuild any PRs and main branch changes
+name: "Validate emoji"
+on: # pull requests
   pull_request:
 
 jobs:
@@ -10,8 +10,8 @@ jobs:
     - name: run action
       id: run_action
       uses: ./
-      with: 
-        my_input: 'World'
+      # with: 
+      #   my_input: 'World'
 
     - name: log action output
       run: echo ${{steps.run_action.outputs.my_output}}     
