@@ -1,9 +1,9 @@
-name: '1k-words'
+name: '1kWords'
 description: 'Pull requests titles must include emojis 🤖'
 author: 'idoco'
 runs:
   using: 'node16'
   main: 'dist/index.js'
 branding:
-  color: "yellow"
-  icon: "bell"  
+  color: "purple"
+  icon: "feather"  
