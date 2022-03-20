@@ -21,3 +21,4 @@ jobs:
     - name: Pull request title should start with emoji
       uses: loadmill/1kWords@v1.0.0
 ```
+
