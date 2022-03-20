@@ -4015,7 +4015,7 @@ function run() {
     const pullRequestTitle = ((_a = github.context.payload.pull_request) === null || _a === void 0 ? void 0 : _a.title) || "";
     const pullRequestUser = ((_b = github.context.payload.pull_request) === null || _b === void 0 ? void 0 : _b.user) || {};
     console.log(`The PR title is "${pullRequestTitle}"`);
-    console.log(`The PR user is "${pullRequestUser}"`);
+    console.log(`The PR user is "${JSON.stringify(pullRequestUser)}"`);
     // Regular expression to match strings starting with emoji
     const regexExp = /^(\u00a9|\u00ae|[\u2000-\u3300]|\ud83c[\ud000-\udfff]|\ud83d[\ud000-\udfff]|\ud83e[\ud000-\udfff]).*/gi;
     if (!regexExp.test(pullRequestTitle)) {
