@@ -12,6 +12,12 @@ function run() {
 
   console.log(`The PR title is ${pullRequestTitle}`);
 
+  const dependenbotRegex = /Bump.* from [0-9]+\.[0-9]+\.[0-9]+ to [0-9]+\.[0-9]+\.[0-9]+/gi;
+  if (dependenbotRegex.test(pullRequestTitle)) {
+    console.log(`The PR title is an automatic dependabot alert`);
+    return;
+  }
+
   // Regular expression to match strings starting with emoji
   const regexExp = /^(\u00a9|\u00ae|[\u2000-\u3300]|\ud83c[\ud000-\udfff]|\ud83d[\ud000-\udfff]|\ud83e[\ud000-\udfff]).*/gi;
 
