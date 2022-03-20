@@ -1,5 +1,4 @@
-# github-action-template
-Simple Typescript GitHub Action Start Template
+# 1kWords
+A good emoji is worth a thousand words. 
 
-
-[Getting Started Article](https://notiz.dev/blog/build-and-publish-your-first-github-action)
+Use this GitHub action to ensure that all PRs titles start with an emoji! 
