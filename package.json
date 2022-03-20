@@ -25,7 +25,8 @@
   "license": "MIT",
   "dependencies": {
     "@actions/core": "^1.2.6",
-    "@actions/github": "^5.0.0"
+    "@actions/github": "^5.0.0",
+    "@octokit/action": "^3.18.0"
   },
   "devDependencies": {
     "@types/node": "^12.7.12",
