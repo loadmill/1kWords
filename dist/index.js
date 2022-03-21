@@ -58,7 +58,7 @@ function updateTitle(pullRequest, addedEmoji) {
             owner: github.context.repo.owner,
             repo: github.context.repo.repo,
             pull_number: pullRequest.number,
-            title: addedEmoji + pullRequest.title,
+            title: addedEmoji + ' ' + pullRequest.title,
         };
         return yield new action_1.Octokit().pulls.update(request);
     });
