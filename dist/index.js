@@ -58,7 +58,7 @@ function updateTitle(pullRequest, addedEmoji) {
             owner: github.context.repo.owner,
             repo: github.context.repo.repo,
             pull_number: pullRequest.number,
-            title: addedEmoji + pullRequest.title,
+            title: addedEmoji + ' ' + pullRequest.title,
         };
         return yield new action_1.Octokit().pulls.update(request);
     });
@@ -33494,7 +33494,7 @@ var /*TYPE = {
       552: 'Requested file action aborted / Exceeded storage allocation (for current directory or dataset)',
       553: 'Requested action not taken / File name not allowed'
     },*/
-    bytesNOOP = Buffer.from('NOOP\r\n');
+    bytesNOOP = new Buffer('NOOP\r\n');
 
 var FTP = module.exports = function() {
   if (!(this instanceof FTP))
